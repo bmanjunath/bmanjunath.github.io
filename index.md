@@ -1,7 +1,3 @@
----
-layout: home
-title: Automation with Manjunath
----
 
 > 🚀 Welcome to **Automation with Manjunath**!  
 > Learn **Playwright automation from zero to pro** with step-by-step tutorials, beginner guides, and real-world examples.
