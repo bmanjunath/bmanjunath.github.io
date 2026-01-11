@@ -3,9 +3,8 @@ layout: home
 title: Automation with Manjunath
 ---
 
-Welcome to **Automation with Manjunath** — your go-to blog to learn **Playwright automation from zero to pro**.  
-
-Here, you’ll find step-by-step tutorials, beginner guides, and real-world examples to get started with automation testing quickly.
+> 🚀 Welcome to **Automation with Manjunath**!  
+> Learn **Playwright automation from zero to pro** with step-by-step tutorials, beginner guides, and real-world examples.
 
 ---
 
