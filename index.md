@@ -1,11 +1,7 @@
-
-> 🚀 Welcome to **Automation with Manjunath**!  
-> Learn **Playwright automation from zero to pro** with step-by-step tutorials, beginner guides, and real-world examples.
-
----
-
-## Latest Posts
+## Playwright Beginner Series
 
 {% for post in site.posts %}
+{% if post.title contains "Playwright" %}
 - [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%b %d, %Y" }}
+{% endif %}
 {% endfor %}
