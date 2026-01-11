@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Automation with Manju
+
 ---
 
 # Welcome to Automation with Manju
