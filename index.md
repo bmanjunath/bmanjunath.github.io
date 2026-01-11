@@ -1,8 +1,3 @@
----
-layout: home
-
----
-
 # Welcome to Automation with Manju
 
 This blog will help you learn **Playwright automation from zero**.
