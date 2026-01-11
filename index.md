@@ -1,4 +1,4 @@
-# Welcome to Automation with Manju
+# Welcome to Automation with Manjunath
 
 This blog will help you learn **Playwright automation from zero**.
 
