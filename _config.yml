@@ -1,5 +1,10 @@
 title: "Automation with Manjunath"
 description: Learn Playwright automation from zero to pro.
 theme: minima
+
 include:
   - assets
+
+collections:
+  playwright:
+    output: true
