@@ -91,7 +91,7 @@ Cross-browser friendly → works on Chromium, Firefox, WebKit without changes
 
 Example: Filling a Login Form
 ```ts
-Copy code
+
 await page.getByLabel('Username').fill('admin');
 await page.getByLabel('Password').fill('password');
 await page.getByRole('button', { name: 'Login' }).click();
