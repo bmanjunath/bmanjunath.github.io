@@ -4,7 +4,7 @@ title: "What is Playwright?"
 permalink: /playwright/what-is-playwright/
 
 ## What is Playwright?
-
+---
 Playwright is an open-source automation framework developed by Microsoft for testing web applications.
 
 It supports:
