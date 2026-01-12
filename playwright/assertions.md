@@ -2,6 +2,7 @@
 layout: page
 title: "Assertions & Validations"
 permalink: /playwright/assertions/
+nav_exclude: true
 ---
 
 ## Assertions & Validations in Playwright
