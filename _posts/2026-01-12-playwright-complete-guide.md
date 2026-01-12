@@ -62,6 +62,3 @@ By the end of this guide, you will be able to:
 ---
 
 ---
-
-👉 **Start here:**  
-➡️ [What is Playwright?](./01-introduction.html)
