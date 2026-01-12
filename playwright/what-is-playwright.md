@@ -2,9 +2,10 @@
 layout: page
 title: "What is Playwright?"
 permalink: /playwright/what-is-playwright/
+---
 
 ## What is Playwright?
----
+
 Playwright is an open-source automation framework developed by Microsoft for testing web applications.
 
 It supports:
@@ -42,7 +43,7 @@ Playwright is ideal for:
 ## Playwright vs Selenium (Beginner View)
 
 | Feature | Playwright | Selenium |
-|------|-----------|---------|
+|--------|-----------|----------|
 | Setup | Very easy | Moderate |
 | Speed | Fast | Slower |
 | Auto-wait | Yes | No |
@@ -72,4 +73,5 @@ In upcoming posts, you will learn:
 ---
 
 ## Next Article
- **Installing Playwright on Windows – Step-by-Step**
+
+👉 **[Installing Playwright on Windows – Step-by-Step](/playwright/install-playwright/)**
