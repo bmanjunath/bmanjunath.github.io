@@ -74,11 +74,9 @@ npx playwright test --headed
 ```
 This is helpful for learning and debugging.
 
-#### Why This Test Is Powerful
+
+### Why This Test Is Powerful
 No WebDriver setup required
-
 Works on Chromium, Firefox, and WebKit
-
 Auto-waits make tests less flaky
-
 Can scale to multiple pages, actions, and assertions
