@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Assertions & Validations"
-permalink: /playwright/assertions/
-nav_exclude: true
+permalink: /_playwright/assertions/
+
 ---
 
 ## Assertions & Validations in Playwright
