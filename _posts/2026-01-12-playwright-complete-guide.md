@@ -11,7 +11,7 @@ title: Playwright Complete Beginner to Advanced Guide (2026)
 
 # 🎭 Playwright Complete Beginner to Advanced Guide (2026)
 
-Welcome to **Automation with Manjunath** 👋  
+Welcome to **Playwright Automation**   
 This is a **step-by-step, practical Playwright learning guide** designed for:
 
 - Beginners with no automation experience  
@@ -60,17 +60,6 @@ By the end of this guide, you will be able to:
 13. [Playwright Best Practices](./13-best-practices.html)
 
 ---
-
-## 🧠 How to Use This Blog
-
-📌 Each topic contains:
-- Simple explanations  
-- Real code examples  
-- Beginner tips  
-- Common mistakes  
-
-📌 No theory overload  
-📌 100% practical learning  
 
 ---
 
