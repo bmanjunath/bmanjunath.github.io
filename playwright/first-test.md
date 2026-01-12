@@ -22,7 +22,7 @@ Step 2: Write a Simple Test
 Open the file and add the following code:
 
 ts
-Copy code
+
 import { test, expect } from '@playwright/test';
 
 test('Open Google homepage', async ({ page }) => {
@@ -45,12 +45,12 @@ Step 4: Run the Test
 In your project folder, run:
 
 bash
-Copy code
+
 npx playwright test
 You should see output like:
 
 sql
-Copy code
+
 Running 1 test using 1 worker
 ✓ example.spec.ts: Open Google homepage
 1 passed
@@ -60,7 +60,7 @@ Step 5: Run Test in Headed Mode
 To see the browser while the test runs:
 
 bash
-Copy code
+
 npx playwright test --headed
 This is helpful for learning and debugging.
 
