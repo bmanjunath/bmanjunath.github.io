@@ -77,7 +77,10 @@ In upcoming posts, you will learn:
 
 ---
 
-## Next Article
- **Installing Playwright on Windows – Step-by-Step**
 
-Bookmark this blog to continue your Playwright learning journey.
+> 📘 **New here?**
+>  
+> This article is part of my **Playwright Complete Learning Path**.  
+> 👉 Start learning step-by-step here:  
+> **[Playwright Learning Path](/playwright/)**
+
