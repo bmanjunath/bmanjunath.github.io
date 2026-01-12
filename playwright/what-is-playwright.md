@@ -3,12 +3,6 @@ layout: page
 title: "What is Playwright?"
 permalink: /playwright/what-is-playwright/
 ---
-
----
-layout: post
-title: What is Playwright? Complete Beginner Guide (2026)
----
-
 If you are new to automation testing and want to start with a modern tool, Playwright is one of the best choices today.
 
 This guide explains Playwright from **absolute zero**, with no prior automation knowledge required.
