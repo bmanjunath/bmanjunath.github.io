@@ -14,7 +14,7 @@ If you are new to automation, **start from Topic 1** and follow in order.
 
 ## 📘 Beginner Topics
 
-1. [What is Playwright?](./what-is-playwright/)
+1. [What is Playwright?](/playwright/what-is-playwright/)
 2. Installing Playwright
 3. Your First Playwright Test
 4. Locators & Selectors
