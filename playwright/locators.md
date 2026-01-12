@@ -46,38 +46,39 @@ Uses the ARIA role of the element (button, link, checkbox, etc.)
 Uses the visible name
 
 Most reliable and accessible
-
-2. getByText
-ts
+```
+### 2. getByText
+```ts
 Copy code
 await page.getByText('Login').click();
 Finds elements by visible text
 
 Great for links, buttons, or labels
-
-3. getByLabel
-ts
+```
+### 3. getByLabel
+```ts
 Copy code
 await page.getByLabel('Username').fill('admin');
 Works for input fields with labels
 
 Automatically finds associated <input> using <label>
-
-4. getByPlaceholder
-ts
+```
+### 4. getByPlaceholder
+```ts
 Copy code
 await page.getByPlaceholder('Enter your email').fill('abc@example.com');
 Targets inputs using placeholder text
 
 Useful when labels are missing
-
-5. getByAltText
-ts
+```
+### 5. getByAltText
+```ts
 Copy code
 await page.getByAltText('Company Logo').click();
 Targets images or icons using alt attribute
 
 Very readable and maintainable
+```
 
 Why Playwright Locators Are Better Than Selectors
 Auto-waiting built-in → waits for elements to be visible/ready
@@ -89,11 +90,12 @@ Accessible-first → encourages good practices
 Cross-browser friendly → works on Chromium, Firefox, WebKit without changes
 
 Example: Filling a Login Form
-ts
+```ts
 Copy code
 await page.getByLabel('Username').fill('admin');
 await page.getByLabel('Password').fill('password');
 await page.getByRole('button', { name: 'Login' }).click();
+```
 ✅ Clear, readable, and reliable.
 
 Summary
