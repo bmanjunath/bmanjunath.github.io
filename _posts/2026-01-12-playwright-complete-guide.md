@@ -40,7 +40,7 @@ By the end of this guide, you will be able to:
 
 ### 🔰 Beginner Level
 1. [What is Playwright?](/playwright/what-is-playwright)
-2. [Installing Playwright](./02-installation.html)
+2. [Installing Playwright](/playwright/install-playwright)
 3. [Your First Playwright Test](./03-first-test.html)
 4. [Understanding Locators](./04-locators.html)
 
