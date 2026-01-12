@@ -80,7 +80,5 @@ After initialization, you will have:
 
 👉 [Your First Playwright Test](/playwright/first-test/)
 
-```
-
 ---
 
