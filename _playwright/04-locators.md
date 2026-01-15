@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Understanding Locators and Selectors"
-permalink: /playwright/locators/
+permalink: /playwright/04-locators/
 ---
 
 ## Understanding Locators in Playwright
