@@ -3,7 +3,7 @@ layout: post
 title: "Playwright Complete Beginner to Advanced Guide (2026)"
 categories: [Playwright, Automation]
 ---
-
+---
 Welcome to **Playwright Automation**   
 This is a **step-by-step, practical Playwright learning guide** designed for:
 
@@ -27,21 +27,21 @@ By the end of this guide, you will be able to:
 
 ---
 
-## 🧭 Learning Path (Recommended Order)
+## 🧭 Learning Path
 
 > Follow the topics in order if you are a beginner.
 
 ### 🔰 Beginner Level
 1. [What is Playwright?](/playwright/what-is-playwright)
 2. [Installing Playwright](/playwright/install-playwright)
-3. [Your First Playwright Test](./03-first-test.html)
-4. [Understanding Locators](./04-locators.html)
+3. [Your First Playwright Test](/playwright/03-first-test)
+4. [Understanding Locators](/playwright/04-locators)
 
 ### ⚙️ Intermediate Level
-5. [User Actions (Click, Type, Hover)](./05-actions.html)
-6. [Assertions & Validations](./06-assertions.html)
-7. [Playwright Test Runner](./07-test-runner.html)
-8. [Page Object Model (POM)](./08-pom.html)
+5. [User Actions (Click, Type, Hover)](/playwright/05-actions.html)
+6. [Assertions & Validations](/playwright/06-assertions.html)
+7. [Playwright Test Runner](/playwright/07-test-runner.html)
+8. [Page Object Model (POM)](/playwright/08-pom.html)
 
 ### 🚀 Advanced Level
 9. [Debugging & Tracing](./09-debugging.html)
