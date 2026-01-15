@@ -2,9 +2,24 @@ title: "Automation with Manjunath"
 description: Learn Playwright automation from zero to pro.
 theme: minima
 
+# GitHub Pages user site settings
+url: "https://bmanjunath.github.io"
+baseurl: ""   # MUST be empty for username.github.io
+
+# Static assets
 include:
   - assets
 
+# Playwright tutorials as a collection (docs-style)
 collections:
   playwright:
     output: true
+    permalink: /playwright/:name/
+
+# Markdown & build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-feed
