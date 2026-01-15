@@ -8,8 +8,6 @@ categories: [Playwright, Automation]
 title: Playwright Complete Beginner to Advanced Guide (2026)
 ---
 
-# 🎭 Playwright Complete Beginner to Advanced Guide (2026)
-
 Welcome to **Playwright Automation**   
 This is a **step-by-step, practical Playwright learning guide** designed for:
 
