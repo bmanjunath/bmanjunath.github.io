@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Installing Playwright"
-permalink: /playwright/install-playwright/
+permalink: /playwright/02-install-playwright/
 ---
 
 ## Installing Playwright (Step-by-Step)
