@@ -106,6 +106,14 @@ Prefer getByRole, getByLabel, getByText for clarity and stability
 Playwright locators make tests less flaky and easier to maintain
 
 
-Next Step
-[User Actions](/playwright/user-actions/)
+
+---
+
+## Next Step
+
+👉 [User Actions](/playwright/user-actions/)
+
+---
+
+
 

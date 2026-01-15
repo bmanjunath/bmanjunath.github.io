@@ -110,5 +110,3 @@ await expect(page.getByRole('button', { name: 'Logout' })).toBeEnabled();
 
 ---
 
-
-```

@@ -139,7 +139,7 @@ npx playwright show-report
 
 ## Next Step
 
-👉 [Page Object Model (POM)](/playwright/page-object-model/)
+👉 [Page Object Model (POM)](/playwright/08-page-object-model/)
 
 ---
 
