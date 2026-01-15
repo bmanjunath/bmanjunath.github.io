@@ -80,3 +80,11 @@ No WebDriver setup required
 Works on Chromium, Firefox, and WebKit
 Auto-waits make tests less flaky
 Can scale to multiple pages, actions, and assertions
+
+---
+
+## Next Step
+
+👉 [Locators & Selectors](/playwright/locators)
+
+---
