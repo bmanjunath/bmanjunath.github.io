@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Assertions & Validations"
-permalink: /playwright/assertions/
+permalink: /playwright/06-assertions/
 
 ---
 

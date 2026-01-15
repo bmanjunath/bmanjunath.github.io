@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Page Object Model (POM)"
-permalink: /playwright/page-object-model/
+permalink: /playwright/08-page-object-model/
 ---
 
 ## Page Object Model (POM) in Playwright

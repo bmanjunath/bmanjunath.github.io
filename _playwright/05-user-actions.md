@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "User Actions in Playwright"
-permalink: /playwright/user-actions/
+permalink: /playwright/05-user-actions/
 ---
 
 ## User Actions in Playwright

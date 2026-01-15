@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Playwright Test Runner"
-permalink: /playwright/test-runner/
+permalink: /playwright/07-test-runner/
 ---
 
 ## Playwright Test Runner
