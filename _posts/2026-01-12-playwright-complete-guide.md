@@ -34,14 +34,14 @@ By the end of this guide, you will be able to:
 ### 🔰 Beginner Level
 1. [What is Playwright?]({{ '/playwright/01-what-is-playwright/' | relative_url }})
 2. [Installing Playwright]({{ '/playwright/02-install-playwright/' | relative_url }})
-3. [Your First Playwright Test]({{ '/playwright/03-first-playwright-test/' | relative_url }})
-4. [Understanding Locators]({{ '/playwright/04-understanding-locators/' | relative_url }})
+3. [Your First Playwright Test]({{ '/playwright/03-first-test/' | relative_url }})
+4. [Understanding Locators]({{ '/playwright/04-locators/' | relative_url }})
 
 ### ⚙️ Intermediate Level
-5. [User Actions (Click, Type, Hover)]({{ '/playwright/05-actions/' | relative_url }})
+5. [User Actions (Click, Type, Hover)]({{ '/playwright/05-user-actions/' | relative_url }})
 6. [Assertions & Validations]({{ '/playwright/06-assertions/' | relative_url }})
 7. [Playwright Test Runner]({{ '/playwright/07-test-runner/' | relative_url }})
-8. [Page Object Model (POM)]({{ '/playwright/08-pom/' | relative_url }})
+8. [Page Object Model (POM)]({{ '/playwright/08-page-object-model/' | relative_url }})
 
 ### 🚀 Advanced Level
 9. [Debugging & Tracing]({{ '/playwright/09-debugging/' | relative_url }})
