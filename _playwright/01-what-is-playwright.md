@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "What is Playwright?"
-permalink: /playwright/what-is-playwright/
+permalink: /playwright/01-what-is-playwright/
 ---
 
 ## What is Playwright?
