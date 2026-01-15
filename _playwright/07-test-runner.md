@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Playwright Test Runner"
 permalink: /playwright/07-test-runner/
 ---
