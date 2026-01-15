@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Page Object Model (POM)"
 permalink: /playwright/08-page-object-model/
 ---
