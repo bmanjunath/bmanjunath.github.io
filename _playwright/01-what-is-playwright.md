@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "What is Playwright?"
 permalink: /playwright/01-what-is-playwright/
 ---

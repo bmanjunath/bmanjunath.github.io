@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Understanding Locators and Selectors"
 permalink: /playwright/04-locators/
 ---

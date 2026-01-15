@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Your First Playwright Test"
 permalink: /playwright/03-first-test/
 ---
