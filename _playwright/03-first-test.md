@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Your First Playwright Test"
-permalink: /playwright/first-test/
+permalink: /playwright/03-first-test/
 ---
 
 ## Your First Playwright Test
