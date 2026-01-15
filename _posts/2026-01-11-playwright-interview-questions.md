@@ -2,7 +2,6 @@
 layout: post
 title: "Playwright Interview Questions & Answers (0–5+ Years)"
 categories: [playwright, interview]
-tags: [playwright, automation, testing]
 permalink: /post/playwright-interview-questions/
 ---
 
