@@ -1,4 +1,4 @@
-## Playwright Beginner Series
+## Playwright Series
 
 {% for post in site.posts %}
 {% if post.title contains "Playwright" %}
