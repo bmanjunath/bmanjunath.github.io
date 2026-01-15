@@ -3,7 +3,7 @@ layout: post
 title: "Playwright Complete Beginner to Advanced Guide (2026)"
 categories: [Playwright, Automation]
 ---
----
+
 Welcome to **Playwright Automation**   
 This is a **step-by-step, practical Playwright learning guide** designed for:
 
@@ -32,7 +32,7 @@ By the end of this guide, you will be able to:
 > Follow the topics in order if you are a beginner.
 
 ### 🔰 Beginner Level
-1. [What is Playwright?](/playwright/what-is-playwright)
+1. [What is Playwright?]({% link _playwright/01-what-is-playwright.md %})
 2. [Installing Playwright](/playwright/install-playwright)
 3. [Your First Playwright Test](/playwright/03-first-test)
 4. [Understanding Locators](/playwright/04-locators)
