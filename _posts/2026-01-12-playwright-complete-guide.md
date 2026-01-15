@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Playwright Complete Beginner to Advanced Guide (2026)"
-date: 2026-01-12
 categories: [Playwright, Automation]
 ---
 
