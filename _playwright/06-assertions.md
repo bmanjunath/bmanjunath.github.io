@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Assertions & Validations"
 permalink: /playwright/06-assertions/
 
