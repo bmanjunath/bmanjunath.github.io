@@ -1,118 +1,311 @@
 ---
+
 layout: default
 title: "User Actions in Playwright"
 permalink: /playwright/05-user-actions/
 ---
 
-## User Actions in Playwright
+# User Actions in Playwright
 
-After learning how to locate elements, the next step is to **interact with them**.  
-Playwright lets you simulate **real user actions** like clicking buttons, typing text, and hovering over elements.
+After learning how to **locate elements**, the next step is to **interact with them**.
 
-These actions are reliable and automatically wait for elements to be ready.
+Playwright allows you to simulate **real user behavior**, such as:
+
+* Clicking buttons
+* Typing text
+* Selecting dropdown values
+* Hovering over elements
+* Uploading files
+* Dragging and dropping elements
+
+Playwright actions are powerful because they **automatically wait for elements to be ready** before performing actions.
 
 ---
 
-## 1️⃣ Click
+# 1️⃣ Click
 
-Clicking is one of the most common actions.
+Clicking is one of the most common user actions.
 
 ```ts
-// Click a button by its role and name
 await page.getByRole('button', { name: 'Login' }).click();
-````
-
-* **Auto-waits** for the button to be visible and enabled
-* Works reliably across browsers
-
----
-
-## 2️⃣ Type Text
-
-Fill input fields with `fill()` or `type()`.
-
-```ts
-// Fill username and password fields
-await page.getByLabel('Username').fill('admin');
-await page.getByLabel('Password').fill('mypassword');
 ```
 
-Difference between `fill()` and `type()`:
+Playwright automatically waits until the element is:
 
-| Method | Behavior                                          |
-| ------ | ------------------------------------------------- |
-| fill() | Replaces existing text instantly                  |
-| type() | Simulates actual typing (slower, more human-like) |
+* Visible
+* Stable
+* Enabled
+* Ready to receive the click
+
+Example:
+
+```ts
+await page.getByText('Submit').click();
+```
 
 ---
 
-## 3️⃣ Hover
+# 2️⃣ Double Click
 
-Hovering is used to reveal hidden menus or tooltips.
+You can perform a double click using `dblclick()`.
+
+```ts
+await page.getByText('Edit').dblclick();
+```
+
+Useful when UI actions require a double click.
+
+---
+
+# 3️⃣ Right Click (Context Click)
+
+Right click opens a context menu.
+
+```ts
+await page.getByText('Options').click({ button: 'right' });
+```
+
+---
+
+# 4️⃣ Typing Text
+
+Playwright provides two ways to enter text.
+
+### Using `fill()`
+
+```ts
+await page.getByLabel('Username').fill('admin');
+```
+
+This **replaces existing text instantly**.
+
+### Using `type()`
+
+```ts
+await page.getByLabel('Username').type('admin');
+```
+
+This **simulates real typing**, character by character.
+
+| Method | Behavior                                 |
+| ------ | ---------------------------------------- |
+| fill() | Clears existing text and enters new text |
+| type() | Types like a real user                   |
+
+---
+
+# 5️⃣ Clear Input Field
+
+```ts
+await page.getByLabel('Search').clear();
+```
+
+Removes existing text from input fields.
+
+---
+
+# 6️⃣ Hover
+
+Hovering triggers menus, tooltips, and UI effects.
 
 ```ts
 await page.getByText('Settings').hover();
 ```
 
-* Automatically waits for the element to appear
-* Triggers hover effects like dropdown menus
+Useful for:
+
+* Dropdown menus
+* Hidden navigation menus
+* Tooltips
 
 ---
 
-## 4️⃣ Keyboard Actions
-
-You can simulate **keyboard keys**:
+# 7️⃣ Check and Uncheck Checkboxes
 
 ```ts
-// Press Enter
+await page.getByLabel('Accept Terms').check();
+```
+
+Uncheck:
+
+```ts
+await page.getByLabel('Accept Terms').uncheck();
+```
+
+Playwright ensures the checkbox reaches the desired state.
+
+---
+
+# 8️⃣ Select Dropdown Values
+
+Selecting values from `<select>` dropdowns.
+
+```ts
+await page.selectOption('#country', 'India');
+```
+
+Or:
+
+```ts
+await page.getByLabel('Country').selectOption('India');
+```
+
+You can also select by value:
+
+```ts
+await page.selectOption('#country', { value: 'IN' });
+```
+
+---
+
+# 9️⃣ Upload Files
+
+Playwright makes file upload easy.
+
+```ts
+await page.setInputFiles('input[type="file"]', 'tests/files/sample.pdf');
+```
+
+Upload multiple files:
+
+```ts
+await page.setInputFiles('input[type="file"]', [
+  'file1.pdf',
+  'file2.pdf'
+]);
+```
+
+---
+
+# 🔟 Drag and Drop
+
+Used for UI interactions involving dragging elements.
+
+```ts
+await page.dragAndDrop('#source', '#target');
+```
+
+Example:
+
+```ts
+await page.dragAndDrop('#item', '#cart');
+```
+
+---
+
+# 1️⃣1️⃣ Keyboard Actions
+
+Simulate keyboard presses.
+
+```ts
 await page.keyboard.press('Enter');
-
-// Type text manually
-await page.keyboard.type('Hello World!');
 ```
 
----
-
-## 5️⃣ Mouse Actions (Optional)
-
-Advanced mouse actions:
+Type text using keyboard:
 
 ```ts
-await page.mouse.move(100, 200);  // Move cursor to coordinates
-await page.mouse.down();           // Press mouse button
-await page.mouse.up();             // Release mouse button
-await page.mouse.click(100, 200);  // Click at coordinates
+await page.keyboard.type('Hello World');
 ```
 
-These are rarely needed with modern locators but useful for drag-and-drop or canvas interactions.
+Common keys:
+
+| Key       | Action              |
+| --------- | ------------------- |
+| Enter     | Submit forms        |
+| Escape    | Close dialogs       |
+| ArrowDown | Navigate menus      |
+| Tab       | Move between inputs |
+
+Example:
+
+```ts
+await page.keyboard.press('Tab');
+```
 
 ---
 
-## Why Playwright User Actions Are Powerful
+# 1️⃣2️⃣ Mouse Actions
 
-* **Auto-waiting** → no need for manual sleep
-* **Cross-browser** → works on Chromium, Firefox, WebKit
-* **Human-like interactions** → better simulation of real users
-* **Debuggable** → works with headed mode for visual validation
+Low-level mouse control.
+
+```ts
+await page.mouse.move(100, 200);
+await page.mouse.down();
+await page.mouse.up();
+```
+
+Click using coordinates:
+
+```ts
+await page.mouse.click(100, 200);
+```
+
+These are useful for:
+
+* Canvas interactions
+* Complex drag-and-drop
+* Custom UI components
 
 ---
 
-## Example: Login Flow with User Actions
+# Example: Login Flow
 
 ```ts
 await page.getByLabel('Username').fill('admin');
+
 await page.getByLabel('Password').fill('mypassword');
+
 await page.getByRole('button', { name: 'Login' }).click();
+
 await expect(page).toHaveURL('/dashboard');
 ```
 
-✅ Clean, readable, and reliable.
+This example demonstrates a **typical login automation flow**.
 
 ---
 
-## Next Step
+# Why Playwright User Actions Are Powerful
+
+Playwright actions provide several advantages:
+
+* **Auto waiting** – no need for manual sleep
+* **Cross-browser compatibility** – Chromium, Firefox, WebKit
+* **Real user simulation**
+* **Stable test execution**
+* **Readable automation code**
+
+---
+
+# Best Practices
+
+Follow these practices for stable tests:
+
+* Use **Playwright locators instead of raw CSS/XPath**
+* Avoid hardcoded waits like `waitForTimeout`
+* Prefer **role-based locators**
+* Keep tests **small and readable**
+
+---
+
+# Summary
+
+User actions allow Playwright tests to simulate **real user interactions with the browser**.
+
+These actions include:
+
+* Clicking elements
+* Typing text
+* Hovering
+* Selecting dropdowns
+* Uploading files
+* Dragging elements
+
+Combining **locators + user actions** creates reliable and maintainable automation tests.
+
+---
+
+# Next Step
 
 👉 [Assertions & Validations](/playwright/assertions/)
 
 ---
-
