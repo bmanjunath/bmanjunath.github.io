@@ -310,6 +310,4 @@ Using the right locator strategy is one of the **most important skills in Playwr
 
 ---
 
-# Next Step
 
-👉 [User Actions](/playwright/05-user-actions/)
