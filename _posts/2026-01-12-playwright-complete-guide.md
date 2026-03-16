@@ -43,13 +43,8 @@ By the end of this guide, you will be able to:
 7. [Playwright Test Runner]({{ '/playwright/07-test-runner/' | relative_url }})
 8. [Page Object Model (POM)]({{ '/playwright/08-page-object-model/' | relative_url }})
 
-### 🚀 Advanced Level
-9. [Debugging & Tracing]({{ '/playwright/09-debugging/' | relative_url }})
-10. [Reports & Screenshots]({{ '/playwright/10-reports/' | relative_url }})
-11. [API Testing with Playwright]({{ '/playwright/11-api-testing/' | relative_url }})
-12. [CI/CD Integration]({{ '/playwright/12-ci-cd/' | relative_url }})
 
-### 🧠 Best Practices
-13. [Playwright Best Practices]({{ '/playwright/13-best-practices/' | relative_url }})
+
+
 
 ---
