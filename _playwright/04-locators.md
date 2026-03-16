@@ -1,119 +1,315 @@
 ---
+
 layout: default
 title: "Understanding Locators and Selectors"
 permalink: /playwright/04-locators/
----
+-----------------------------------
 
-## Understanding Locators in Playwright
+# Understanding Locators in Playwright
 
 In Playwright, **locators** tell the framework **how to find elements on a page**.
 
-Instead of relying on brittle CSS or XPath, Playwright provides **smart, reliable, and readable locators**.
+Instead of relying only on brittle CSS or XPath, Playwright provides **smart, reliable, and readable locators** that improve test stability.
+
+Locators are designed to:
+
+* Automatically **wait for elements**
+* Be **more readable**
+* Be **less flaky**
+* Encourage **accessible web practices**
 
 ---
 
-## Why Not Use Plain CSS or XPath?
+# Why Not Use Plain CSS or XPath?
 
-Traditional selectors have problems:
+Traditional selectors have several problems:
 
-| Problem | Explanation |
-|---------|------------|
-| Fragile | Minor UI changes break tests |
-| Hard to read | Complex CSS/XPath is not intuitive |
-| Flaky | Requires manual waits; often fails |
-| Less maintainable | Hard to reuse across tests |
+| Problem               | Explanation                                      |
+| --------------------- | ------------------------------------------------ |
+| Fragile               | Minor UI changes can break tests                 |
+| Hard to read          | Complex CSS/XPath expressions reduce readability |
+| Flaky                 | Requires manual waits in many cases              |
+| Difficult to maintain | Hard to reuse across test suites                 |
 
----
-
-## Playwright Locators
-
-Playwright offers **robust locators** that are:
-
-- **Readable** — easy to understand what element is being targeted  
-- **Stable** — less likely to break when UI changes  
-- **Auto-waiting** — automatically waits for elements to appear
+Because of this, Playwright provides **higher-level locator APIs**.
 
 ---
 
-## Recommended Locator Methods
+# Playwright Locator Methods
 
-### 1. getByRole (Best Practice)
+## 1. getByRole (Best Practice)
 
 ```ts
 await page.getByRole('button', { name: 'Submit' }).click();
-Uses the ARIA role of the element (button, link, checkbox, etc.)
-
-Uses the visible name
-
-Most reliable and accessible
 ```
-### 2. getByText
+
+This locator:
+
+* Uses the **ARIA role** of the element (`button`, `link`, `textbox`, etc.)
+* Uses the **visible accessible name**
+* Is the **most recommended locator**
+
+Example:
+
 ```ts
-Copy code
+await page.getByRole('textbox', { name: 'Username' }).fill('admin');
+```
+
+---
+
+# 2. getByText
+
+```ts
 await page.getByText('Login').click();
-Finds elements by visible text
-
-Great for links, buttons, or labels
 ```
-### 3. getByLabel
+
+This locator finds elements using **visible text content**.
+
+Useful for:
+
+* Buttons
+* Links
+* Headings
+* Labels
+
+Example:
+
 ```ts
-Copy code
+await page.getByText('Sign in').click();
+```
+
+---
+
+# 3. getByLabel
+
+```ts
 await page.getByLabel('Username').fill('admin');
-Works for input fields with labels
-
-Automatically finds associated <input> using <label>
 ```
-### 4. getByPlaceholder
+
+Targets input elements associated with a `<label>`.
+
+Example HTML:
+
+```html
+<label>Username</label>
+<input type="text" />
+```
+
+Playwright automatically finds the correct input field.
+
+---
+
+# 4. getByPlaceholder
+
 ```ts
-Copy code
 await page.getByPlaceholder('Enter your email').fill('abc@example.com');
-Targets inputs using placeholder text
-
-Useful when labels are missing
 ```
-### 5. getByAltText
+
+Targets input fields using **placeholder text**.
+
+Example HTML:
+
+```html
+<input placeholder="Enter your email">
+```
+
+---
+
+# 5. getByAltText
+
 ```ts
-Copy code
 await page.getByAltText('Company Logo').click();
-Targets images or icons using alt attribute
-
-Very readable and maintainable
 ```
 
-Why Playwright Locators Are Better Than Selectors
-Auto-waiting built-in → waits for elements to be visible/ready
+Used for images and icons that contain an **alt attribute**.
 
-Readable & maintainable → easier for team members to understand
+Example HTML:
 
-Accessible-first → encourages good practices
+```html
+<img src="logo.png" alt="Company Logo">
+```
 
-Cross-browser friendly → works on Chromium, Firefox, WebKit without changes
+---
 
-Example: Filling a Login Form
+# 6. getByTitle
+
 ```ts
+await page.getByTitle('Settings').click();
+```
 
+Targets elements using the **title attribute**.
+
+Example HTML:
+
+```html
+<button title="Settings">⚙</button>
+```
+
+---
+
+# 7. getByTestId (Automation Friendly)
+
+```ts
+await page.getByTestId('login-button').click();
+```
+
+Example HTML:
+
+```html
+<button data-testid="login-button">Login</button>
+```
+
+Benefits:
+
+* Stable locator
+* Recommended for **test automation frameworks**
+* Less likely to break due to UI changes
+
+---
+
+# Using CSS Selectors
+
+Sometimes CSS selectors are necessary.
+
+Example:
+
+```ts
+await page.locator('#username').fill('admin');
+```
+
+Example with class:
+
+```ts
+await page.locator('.login-button').click();
+```
+
+Example with attribute selector:
+
+```ts
+await page.locator('input[name="username"]').fill('admin');
+```
+
+---
+
+# Using XPath
+
+XPath is another way to locate elements.
+
+Example:
+
+```ts
+await page.locator('//button[text()="Login"]').click();
+```
+
+Another example:
+
+```ts
+await page.locator('//input[@name="username"]').fill('admin');
+```
+
+⚠ XPath should be used **only when other locators are not available**.
+
+---
+
+# Chaining Locators
+
+Locators can be chained to narrow searches.
+
+Example:
+
+```ts
+await page.locator('#login-form').locator('button').click();
+```
+
+This searches for the button **inside the login form only**.
+
+---
+
+# Filtering Locators
+
+Playwright allows filtering based on text or other conditions.
+
+Example:
+
+```ts
+await page.locator('button').filter({ hasText: 'Submit' }).click();
+```
+
+---
+
+# Selecting Specific Elements
+
+## First Element
+
+```ts
+await page.locator('.product').first().click();
+```
+
+## Last Element
+
+```ts
+await page.locator('.product').last().click();
+```
+
+## nth Element
+
+```ts
+await page.locator('.product').nth(2).click();
+```
+
+This selects the **third element** (index starts from 0).
+
+---
+
+# Example: Login Form Automation
+
+```ts
 await page.getByLabel('Username').fill('admin');
+
 await page.getByLabel('Password').fill('password');
+
 await page.getByRole('button', { name: 'Login' }).click();
 ```
-✅ Clear, readable, and reliable.
 
-Summary
-Avoid CSS/XPath unless absolutely necessary
+Advantages:
 
-Prefer getByRole, getByLabel, getByText for clarity and stability
-
-Playwright locators make tests less flaky and easier to maintain
-
-
+* Clear
+* Readable
+* Reliable
+* Maintainable
 
 ---
 
-## Next Step
+# Best Practices
 
-👉 [User Actions](/playwright/user-actions/)
+Prefer locator strategies in the following order:
+
+1. `getByRole()`
+2. `getByLabel()`
+3. `getByText()`
+4. `getByTestId()`
+5. CSS selectors
+6. XPath (last option)
+
+This approach improves **test stability and readability**.
 
 ---
 
+# Summary
 
+Playwright locators provide a **modern and reliable way to identify elements**.
 
+Benefits include:
+
+* Built-in auto waiting
+* Cleaner test code
+* Better maintainability
+* Reduced flaky tests
+
+Using the right locator strategy is one of the **most important skills in Playwright automation**.
+
+---
+
+# Next Step
+
+👉 [User Actions](/playwright/05-user-actions/)
